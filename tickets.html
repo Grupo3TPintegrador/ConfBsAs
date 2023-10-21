@@ -97,16 +97,19 @@
             </div>
 
             <!-- Formulario -->
-            <form>
+            <form action="action_page.php">
                 <div class="row">
                     <div class="col-12 col-md-6 p-2">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="nombre">
+                        <input type="text" id="txt_name" class="form-control" placeholder="Nombre" aria-label="nombre"
+                        required/>
                     </div>
                     <div class="col-12  col-md-6 p-2">
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="apellido">
+                        <input type="text" id="txt_ape" class="form-control" placeholder="Apellido" aria-label="apellido"
+                        required/>
                     </div>
                     <div class="col-12 p-2">
-                        <input type="text" class="form-control" placeholder="Correo" aria-label="correo">
+                        <input type="email" id="txt_mail" class="form-control" placeholder="Correo" aria-label="correo"
+                        required/>
                     </div>
                 </div>
                 <div class="row">
@@ -125,7 +128,7 @@
                 </div>
 
                 <div class="alert alert-primary mt-3 p-2" role="alert">
-                    Total a pagar: $  <span id="resultado">0</span>
+                    Total a pagar: $  <span id="resultado"></span>
                   </div>
 
 
