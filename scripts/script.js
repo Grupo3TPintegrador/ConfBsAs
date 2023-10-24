@@ -13,7 +13,7 @@ function calcular(){
       precioDescuento = precio * descuento[cat];
       return cant * precioDescuento;
     } else {
-    alert("Debe ingresar una cantidad valida y distinta de 0")
+    alert("Debe ingresar una cantidad mayor a 0")
     return 0
     } 
   
@@ -23,7 +23,7 @@ function validarTxt(){
   let apellido = document.getElementById("txt_ape").value;
   let mail = document.getElementById("txt_mail").value;
   let  emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-  console.log(nombre+apellido+mail);
+  console.log(`${nombre} ${apellido}.Mail: ${mail}`);
   if(nombre ==="" || apellido ==="" || mail ===""){
     alert("Debe completar todos los campos");
     return false;
@@ -43,9 +43,6 @@ btnResumen.addEventListener("click", () => {
   if(validarTxt()){
     document.getElementById("resultado").innerText = calcular();
     console.log("verdadero");
-  }else{
-    console.log("false");
-    alert("Debe completar todos los campos")
   }
 });
 
